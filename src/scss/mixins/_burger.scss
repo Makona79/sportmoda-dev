@@ -4,16 +4,18 @@
   --burger-width: 30px;
   --burger-height: 30px;
   --burger-line-height: 2px;
-
-  position: relative;
-  border: none;
-  padding: 0;
-  width: var(--burger-width);
-  height: var(--burger-height);
-  color: #000;
-  background-color: transparent;
-  cursor: pointer;
-
+  display: none;
+  @include tablet {
+    position: relative;
+    display: block;
+    border: none;
+    padding: 0;
+    width: var(--burger-width);
+    height: var(--burger-height);
+    color: #000;
+    background-color: transparent;
+    cursor: pointer;
+  }
   &::before,
   &::after {
     content: "";
