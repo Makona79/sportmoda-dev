@@ -1,12 +1,15 @@
 console.log('слайдер');
 
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 const mySwiper = new Swiper(".hero__slider-main", {
   loop: true,
   lazy: true,
+  autoplay: {
+    delay: 5000,
+  },
   // If we need pagination
   pagination: {
     el: ".main-slider__pagination",
