@@ -280,30 +280,6 @@
     }
   }
 }
-.arrow-up {
-  position: fixed;
-  right: 3%;
-  bottom: 20%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  cursor: pointer;
-  background-color: var(--red-color);
-  transition: box-shadow 0.3s ease-in-out;
-  &:hover {
-    box-shadow: 0px 0px 20px var(--red-color);
-  }
-  svg {
-    width: 25px;
-    height: 25px;
-    fill: var(--light-color);
-  }
-}
-.arrow-up--hide {
-  display: none;
-}
+
 .phonecall {
 }
