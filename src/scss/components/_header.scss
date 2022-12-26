@@ -92,7 +92,7 @@
     border-left: 1px solid #a7a7a7;
     font-weight: 500;
     font-size: 14px;
-    z-index: 502;
+
     svg {
       margin-right: 5px;
       fill: var(--black-color);
@@ -101,6 +101,7 @@
       border-left: none;
       justify-content: center;
       width: 40px;
+      z-index: 502;
       svg {
         fill: var(--red-color);
       }
@@ -279,17 +280,20 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 146px;
+    height: 177px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    @include tablet{
+      height: 146px;
+    }
     @include mobile{
       height: 177px;
     }
   }
 
-  @include tablet {
+  @media (max-width: (1440px)) {
     position: fixed;
     inset: 0;
     flex-direction: column;
@@ -300,10 +304,13 @@
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    padding: 175px 15px 15px;
+    padding: 210px 15px 15px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    @include tablet{
+      padding: 175px 15px 15px;
+    }
     @include mobile{
       padding: 190px 15px 15px;
     }
@@ -325,14 +332,14 @@
 .bottom {
   border: 1px solid #f3f3f3;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
-  @include tablet {
+  @include big-desktop {
     border-top: none;
   }
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include tablet {
+    @include big-desktop {
       padding: 0 15px 10px;
     }
 
@@ -358,7 +365,7 @@
     &:hover {
       box-shadow: 0px 0px 20px var(--red-color);
     }
-    @include tablet {
+    @include big-desktop {
       margin: 0 0 20px 0;
       width: 200px;
       height: 36px;
@@ -379,7 +386,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include tablet {
+
+
+    @include big-desktop {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
@@ -391,7 +400,10 @@
 
   &__item {
     margin-right: 30px;
-    @include tablet {
+    @media (max-width: (1600px)){
+      margin: 0 20px 0 0;
+    }
+    @include big-desktop {
       margin: 0 0 20px 0;
     }
   }
@@ -399,9 +411,11 @@
   // .bottom__link
 
   &__link {
+    display: inline-flex;
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
+
     &:hover {
       text-decoration: underline;
     }
@@ -426,7 +440,7 @@
     &:hover {
       text-decoration: underline;
     }
-    @include tablet {
+    @include big-desktop {
       margin: 0 0 20px 0;
       padding: 0;
       height: auto;

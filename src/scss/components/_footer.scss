@@ -3,10 +3,14 @@
   background-color: #3e3c3c;
   // .footer__row
   &__container {
-    padding: 60px 0;
+    padding: 60px 15px;
+    @media (max-width: (480px)) {
+      padding: 40px 15px;
+    }
   }
   &__row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 0 50px 0;
@@ -19,7 +23,12 @@
     flex-direction: column;
 
     &:not(:last-child) {
-      margin: 0 50px 0 0;
+      margin: 0 50px 20px 0;
+    }
+    @media (max-width: (1200px)) {
+      &:not(:last-child) {
+        margin: 0 20px 20px 0;
+      }
     }
   }
 
@@ -80,11 +89,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: (480px)) {
+      flex-direction: column;
+    }
   }
 
   // .footer__bottom-col
 
   &__bottom-col {
+    margin: 0 0 10px 0;
   }
 
   // .footer__bottom-descr
@@ -92,7 +105,6 @@
   &__bottom-descr {
     color: #bebaba;
   }
-  // .footer__bottom-item
 
   &__bottom-list {
     display: flex;
@@ -103,9 +115,13 @@
       text-decoration: underline;
     }
   }
+  // .footer__bottom-item
   &__bottom-item {
     margin: 0 20px 0 0;
     transition: transform 0.3s ease-in-out;
+    @include mobile {
+      margin: 0;
+    }
     &:hover {
       transform: translateY(-3px);
     }
@@ -128,6 +144,12 @@
   &__list {
     li:not(:last-child) {
       margin: 0 0 30px 0;
+    }
+    @media (max-width: (520px)) {
+      display: flex;
+      li:not(:last-child) {
+        margin: 0 30px 30px 0;
+      }
     }
   }
 
@@ -196,6 +218,7 @@
     border-radius: 50px;
     background-color: #727070;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
     svg {
       width: 25px;
       height: 25px;
@@ -205,6 +228,19 @@
     &:hover {
       background-color: #b9b8b8;
       color: var(--black-color);
+    }
+    @media (max-width: (1200px)) {
+      width: 300px;
+    }
+    @include mobile {
+      font-size: 12px;
+      height: 40px;
+      width: 240px;
+      padding: 0 10px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
@@ -245,9 +281,9 @@
   }
 }
 .arrow-up {
-  position: absolute;
+  position: fixed;
   right: 3%;
-  top: 20%;
+  bottom: 20%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -265,6 +301,9 @@
     height: 25px;
     fill: var(--light-color);
   }
+}
+.arrow-up--hide {
+  display: none;
 }
 .phonecall {
 }

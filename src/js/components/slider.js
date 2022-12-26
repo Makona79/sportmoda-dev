@@ -7,9 +7,9 @@ Swiper.use([Navigation, Pagination, Autoplay]);
 const mySwiper = new Swiper(".hero__slider-main", {
   loop: true,
   lazy: true,
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
   // If we need pagination
   pagination: {
     el: ".main-slider__pagination",
