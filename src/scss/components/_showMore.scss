@@ -1,0 +1,31 @@
+.btn-more {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 215px;
+  height: 60px;
+  padding: 0 5px;
+  border: 1px solid #d2334d;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 0px 20px var(--red-color);
+  }
+  @include tablet{
+    width: 127px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+.brands__item:nth-child(n + 23) {
+  display: none;
+}
+.brands__item.is-visible {
+  display: block;
+}
