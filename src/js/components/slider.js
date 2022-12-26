@@ -1,4 +1,4 @@
-console.log('слайдер');
+//console.log('слайдер');
 
 import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 
@@ -40,24 +40,24 @@ const news = new Swiper(".news-slider", {
   //  spaceBetween: 30,
   loop: true,
   lazy: true,
- // Responsive breakpoints
- breakpoints: {
-  // when window width is >= 320px
-  375: {
-    slidesPerView: 1,
-    spaceBetween: 10
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    375: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 1530px
+    1530: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
   },
-  // when window width is >= 768px
-  768: {
-    slidesPerView: 2,
-    spaceBetween: 20
-  },
-  // when window width is >= 1530px
-  1530: {
-    slidesPerView: 3,
-    spaceBetween: 30
-  }
-},
 
   // Navigation arrows
   navigation: {
